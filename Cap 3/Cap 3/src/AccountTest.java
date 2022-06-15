@@ -1,27 +1,37 @@
-//Figura 3.2: AccountTest.Java
-//Cria e manipula um objeto Account.
+//Figura 3.9: AccountTest.Java
+//Entrada e sída de número de ponro flutuante com objetos Account.
 import java.util.Scanner;
 
 public class AccountTest
 {
 	public static void main(String[] args)
 	{
-		//cria um objeto Scanner para obter entrada a partir da janela de comando
+		Account account1 = new Account("Jane Green", 50.00);
+		Account account2 = new Account("John Blue", -7.52);
+
+		//exibe saldo inicial de cada objeto
+		System.out.printf("%S balance: $%.2f \n", account1.getName(), account1.getBalance());
+		System.out.printf("%S balance: $%.2f \n", account2.getName(), account2.getBalance());
+	
+		//cria um Scanner para obter entrada a partir da janela de comando
 		Scanner input = new Scanner(System.in);
 		
-		//cria um objeto Account e o atribui a myAccount;
-		Account myAccount = new Account();
+		System.out.print("Enter deposit amount for account1: "); //prompt
+		double depositAmount = input.nextDouble(); //obtém a entrada do usuário
+		System.out.printf("\nadding %.2f to account1 balance \n\n", depositAmount);
+		account1.deposit(depositAmount); //adiciona o saldo de account1
 		
-		//exibe o valor inicial no nome(null)
-		System.out.printf("Inital name is: %s\n\n", myAccount.getName());
+		//exibe os saldos
+		System.out.printf("%s balance: $%.2f \n", account1.getName(), account1.getBalance());
+		System.out.printf("%s balance: $%.2f \n", account2.getName(), account2.getBalance());
 		
-		//solicita e lê o nome
-		System.out.println("Please enter the name: ");
-		String theName = input.nextLine(); //lê uma linha de texto
-		myAccount.setName(theName); //insere theName em myAccount
-		System.out.println(); //gera saída de uma linha em branco
+		System.out.print("Enter deposit amount for account2: "); //prompt
+		depositAmount = input.nextDouble(); //obtém a entrada do usuário
+		System.out.printf("\nadding %.2f to account2 balance \n\n", depositAmount);
+		account2.deposit(depositAmount); //adiciona o saldo de account2
 		
-		//exibe o nome armazenado no objeto myAccount
-		System.out.printf("Name in object myAccount is: \n%s\n", myAccount.getName());
-	}
+		//exibe os saldos
+		System.out.printf("%s balance: $%.2f \n", account1.getName(), account1.getBalance());
+		System.out.printf("%s balance: $%.2f\n\n", account2.getName(), account2.getBalance());
+	}//fim de main
 }//fim da classe AcountTest
