@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class InvoiceTest {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.ini);
+		
+		Invoice inv1 = new Invoice("58942", "roberto", 3, 567.32);
+		Invoice inv2 = new Invoice("95435", "jose", 7, 45.99);
+		
+		System.out.printf("%s | %s | %o | %.2f = %.2f",
+				inv1.getNumero(), inv1.getDescricao(), inv1.getQuantia(), inv1.getPreco(), inv1.getInvoiceAmount());
+	}
+
+}

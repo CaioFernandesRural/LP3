@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+
+public class EstudoGUI {
+
+	public static void main(String[] args) {
+		
+		String number1 = JOptionPane.showInputDialog("Número 1:");
+		String number2 = JOptionPane.showInputDialog("Número 2:");
+		
+		Integer n1 = Integer.parseInt(number1);
+		Integer n2 = Integer.parseInt(number2);
+		
+		int sum = n1 + n2;
+		
+		String message =
+				String.format("%s, mais %s = %o", number1, number2, sum);
+		
+		JOptionPane.showMessageDialog(null, message);
+
+	}
+
+}

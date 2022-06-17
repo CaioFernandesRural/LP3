@@ -1,0 +1,20 @@
+import javax.swing.JOptionPane;
+
+public class EstudoGUI {
+
+	public static void main(String[] args) {
+		
+		String number1 = JOptionPane.showInputDialog("Número 1:");
+		String number2 = JOptionPane.showInputDialog("Número 2:");
+		
+		
+		int sum = Integer.parseInt(number1) + Integer.parseInt(number2);
+		
+		String message =
+				String.format("%s + %s = %o", number1, number2, sum);
+		
+		JOptionPane.showMessageDialog(null, message);
+
+	}
+
+}

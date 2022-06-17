@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class InvoiceTest {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		Invoice inv1 = new Invoice("58942", "roberto", 3, 567.32);
+		
+		System.out.printf("%s | %s | %o | %.2f = %.2f",
+				inv1.getNumero(), inv1.getDescricao(), inv1.getQuantia(), inv1.getPreco(), inv1.getInvoiceAmount());
+		
+		System.out.println("Numero novo: ");
+	}
+
+}
