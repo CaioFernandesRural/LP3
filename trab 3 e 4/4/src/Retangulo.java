@@ -1,8 +1,8 @@
 
 public class Retangulo {
 
-	private double comprimento;
-	private double largura;
+	protected double comprimento;
+	protected double largura;
 	
 	public double getComprimento() {
 		return comprimento;
